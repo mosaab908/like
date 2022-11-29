@@ -1,0 +1,35 @@
+<!--<form [formGroup]="registerForm" >
+    <div class="form-group">
+        <label for="inputNameHome">Name Home</label>
+        <input type="text" class="form-control" formControlName="name_home" id="inputNameHome" placeholder="Enter First Name">
+      </div>
+    <div class="form-group">
+        <label for="inputSizeHome">Size Home</label>
+        <input type="text" class="form-control" formControlName="size_home" id="inputSizeHome" placeholder="Enter Last Name">
+    </div>
+    <div class="form-group">
+      <label for="inputCostHome">Cost Home</label>
+      <input type="email" class="form-control" formControlName="cost_home" id="inputCostHome" aria-describedby="emailHelp" placeholder="Enter Email">
+      <small id="emailHelp" class="form-text text-muted">Ensure you enter the correct email</small>
+    </div>
+    <button class="btn btn-primary" (click)="onSubmit()">Register</button>
+</form>-->
+<input type="button" value="new home" (click)="showForm()">
+
+<div *ngIf="foundRegister">
+  <br><br>
+<form #homeForm="ngForm" (ngSubmit)="onHomeCreate(homeForm.value)">
+  <br>
+    <label for="inputNameHome">Name Home</label>
+    <input type="text" class="form-control" name="name_home" ngModel>
+    <br>
+    <label for="inputSizeHome">Size Home</label>
+    <input type="text" class="form-control" name="size_home" ngModel>
+    <br>
+    <label for="inputCostHome">Cost Home</label>
+      <input type="email" class="form-control" name="cost_home" ngModel>
+    <input type="submit" value="Add Home">
+</form>
+
+
+</div>

@@ -1,0 +1,17 @@
+<h2>List of Home</h2>
+<table>
+  <tbody>
+      <tr>
+        <td>Id </td>
+        <td>Home Name </td>
+        <td>Size Home </td>
+        <td>Cost Home </td>
+      </tr>
+      <tr *ngFor = "let home of homeData">
+        <td>{{home.home_id}}</td>
+        <td>{{home.name_home}}</td>
+        <td>{{home.size_home}}</td>
+        <td>{{home.cost_home}}</td>
+      </tr>
+  </tbody>
+</table>

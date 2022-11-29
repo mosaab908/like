@@ -1,0 +1,12 @@
+<h1>Home Search Box</h1>
+
+<input [(ngModel)]="home_id" #id="ngModel" required minLength="1">
+
+<input type="button" (click)="searchHome()" value="search">
+
+<div *ngIf="foundHome">
+  <app-home [homeData]="homeData"></app-home>
+</div>
+
+<app-home-register></app-home-register>
+<app-home-list></app-home-list>
